@@ -1,5 +1,7 @@
 <!Doctype html>
 <html>
+  <head>
+</head>
     <body>
         <form>
         <h2>Resume Builder</h2>
