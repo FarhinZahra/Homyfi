@@ -1,2 +1,2 @@
 # Homyfi
-WebTech Project
+WebTech Homyfi
