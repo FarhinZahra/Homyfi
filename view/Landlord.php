@@ -24,7 +24,7 @@
             <input type="password" name="confirm_password" placeholder="Confirm Password" required>
             <input type="text" name="contact_number" placeholder="Contact Number" required>
             <input type="text" name="property_type" placeholder="Property Type (e.g., Apartment, House)" required>
-            <input type="text" name="address" placeholder="Business Address" required>
+            <input type="text" name="address" placeholder="Business Address" >
             <input type="text" name="company_name" placeholder="Company Name (Optional)">
             <input type="text" name="license_number" placeholder="License Number" required>
             <button type="submit">Register</button>
