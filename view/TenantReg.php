@@ -4,7 +4,7 @@
 </head>
     <body>
        <center>
-        <h2>........................Landlord Registration.......................</h2>
+        <h2>........................Tenant Registration.......................</h2>
 
         <form action="form.php" method="POST">
           <table>
@@ -14,10 +14,11 @@
             <input type="password" name="password" placeholder="Password" required><br><br>
             <input type="password" name="confirm_password" placeholder="Confirm Password" required><br><br>
             <input type="text" name="contact_number" placeholder="Contact Number" required><br><br>
-            <input type="text" name="property_type" placeholder="Property Type (Apat/House)" required><br><br>
-            <input type="text" name="address" placeholder="Business Address" ><br><br>
-            <input type="text" name="company_name" placeholder="Company Name (Optional)"><br><br>
-            <input type="text" name="license_number" placeholder="License Number" required><br><br>
+            <input type="text" name="preferred_location" placeholder="Preferred Location" required><br><br>
+            <input type="text" name="budget_range" placeholder="Budget Range ($5000-$100000)" required><br><br>
+            <input type="text" name="occupation" placeholder="Occupation" required><br><br>
+            <label for="date">Move in Date:</label>
+            <input type="date" name="move_in_date" required><br><br>
             <button type="submit">Register</button>
         </form> 
 </table>
@@ -25,4 +26,3 @@
 
 </body>
 </html>
-  
