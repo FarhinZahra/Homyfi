@@ -1,13 +1,13 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
 <head>
     <title>Tenant Register</title>
 </head>
 <body>
     <center>
-        <h2>..................HomyFi.................... </h2>
+        <h2>..................HomyFi....................</h2>
         <h3>............ Tenant Registration............</h3>
-        <form action="form.php" method="POST">
+        <form action="action_page.php" method="POST" enctype="multipart/form-data">
             <table>
                 <tr>
                     <td>Full Name:</td>
@@ -37,20 +37,46 @@
                     <td>Budget Range:</td>
                     <td><input type="text" name="budget_range" required></td>
                 </tr>
-                <tr>
-                    <td>Occupation:</td>
-                    <td><input type="text" name="occupation" required></td>
-                </tr>
+                
                 <tr>
                     <td>Move-in Date:</td>
                     <td><input type="date" name="move_in_date" required></td>
                 </tr>
-               
                 <tr>
                     <td>National ID:</td>
                     <td><input type="text" name="national_id" required></td>
                 </tr>
-    
+                <tr>
+                    <td>Gender:</td>
+                    <td>
+                        <input type="radio" name="gender" value="male" required> Male
+                        <input type="radio" name="gender" value="female"> Female
+                        <input type="radio" name="gender" value="other"> Other
+                    </td>
+                </tr>
+                <tr>
+                    <td>Rental Type:</td>
+                    <td>
+                        <select name="rental_type" required>
+                            <option value="">Select</option>
+                            <option value="apartment">Apartment</option>
+                            <option value="house">House</option>
+                            <option value="shared">Shared Room</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Amenities Required:</td>
+                    <td>
+                        <input type="checkbox" name="amenities[]" value="parking"> Parking
+                        <input type="checkbox" name="amenities[]" value="wifi"> WiFi
+                        <input type="checkbox" name="amenities[]" value="furnished"> Furnished
+                    </td>
+                </tr>
+                <tr>
+                    <td>Upload ID Proof:</td>
+                    <td><input type="file" name="id_proof" accept=".jpg, .png, .pdf" required></td>
+                </tr>
                 
                 <tr>
                     <td>Special Requirements:</td>
@@ -66,5 +92,3 @@
     </center>
 </body>
 </html>
-
-
