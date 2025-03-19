@@ -16,10 +16,10 @@
                 <tr><td><input type="password" name="password" placeholder="Password" required></td></tr>
                 <tr><td><input type="password" name="confirm_password" placeholder="Confirm Password" required></td></tr>
                 <tr><td><input type="text" name="contact_number" placeholder="Contact Number" required></td></tr>
-                <tr><td>  <input type="text" name="property_type" placeholder="Property Type (Apat/House)" required></td></tr>
-                <tr><td>  <input type="text" name="address" placeholder="Business Address" ></td></tr>
-                <tr><td>  <input type="text" name="company_name" placeholder="Company Name (Optional)"></td></tr>
-                <tr><td>  <input type="text" name="license_number" placeholder="License Number" required></td></tr>
+                <tr><td><input type="text" name="property_type" placeholder="Property Type (Apat/House)" required></td></tr>
+                <tr><td><input type="text" name="address" placeholder="Business Address" ></td></tr>
+                <tr><td><input type="text" name="company_name" placeholder="Company Name (Optional)"></td></tr>
+                <tr><td><input type="text" name="license_number" placeholder="License Number" required></td></tr>
                 <tr>
                     <td colspan="2" align="center">
                         <button type="submit">Register</button>
