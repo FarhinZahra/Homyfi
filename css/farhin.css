@@ -1,0 +1,106 @@
+/* Tenant Registration Form Styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #eaf2f8;
+  margin: 0;
+  padding: 20px;
+}
+
+h2, h3 {
+  color: #1a5276;
+  text-align: center;
+  margin-bottom: 15px;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+}
+
+form {
+  max-width: 700px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  position: relative;
+  z-index: 1;
+}
+
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 10px;
+}
+
+td {
+  padding: 8px;
+  vertical-align: middle;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+input[type="file"],
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #aed6f1;
+  border-radius: 5px;
+  box-sizing: border-box;
+  background-color: #f9f9f9;
+}
+
+button[type="submit"] {
+  background-color: #2874a6;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  display: block;
+  margin: 20px auto 0;
+  transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+  background-color: #1a5276;
+}
+
+/* Radio and checkbox styling */
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+/* Position example for form header */
+.form-header {
+  position: relative;
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+}
+
+.form-header:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 25%;
+  width: 50%;
+  height: 2px;
+  background-color: #3498db;
+}
+
+/* Inline block example for amenities */
+.amenities-container {
+  display: inline-block;
+  margin-top: 5px;
+}
+
+/* Overflow example for textarea */
+textarea {
+  min-height: 80px;
+  resize: vertical;
+  overflow-y: auto;
+}
