@@ -7,7 +7,7 @@
        <center>
                     <h2>..................HomyFi.................... </h2>
         <h3>........................Landlord Registration.......................</h3>
-
+        
         <form action="form.php" method="POST">
 
             <table>
@@ -21,7 +21,7 @@
                 <tr><td><input type="text" name="company_name" placeholder="Company Name (Optional)"></td></tr>
                 <tr><td><input type="text" name="license_number" placeholder="License Number" required></td></tr>
                 <tr>
-                    <td colspan="2" align="center">
+                    <td align="center">
                         <button type="submit">Register</button>
                     </td>
                 </tr>
