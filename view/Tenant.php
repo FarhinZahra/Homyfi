@@ -9,9 +9,8 @@
         <h2>HomyFi - Tenant Registration</h2>
         <h3>Find Your Perfect Home</h3>
         
-        <form action="action_page.php" method="POST" enctype="multipart/form-data">
+        <form action="action_page.php" method="POST">
             <table>
-                <!-- Personal Information Section -->
                 <tr>
                     <td colspan="2"><strong>Personal Details</strong></td>
                 </tr>
