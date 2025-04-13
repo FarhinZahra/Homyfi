@@ -16,23 +16,23 @@
                 </tr>
                 <tr>
                     <td>Full Name:</td>
-                    <td><input id="txtFname" type="text" name="full_name" ></td>
+                    <td><input type="text" name="full_name" autofocus></td>
                 </tr>
                 <tr>
                     <td>Email:</td>
-                    <td><input id="txtEmail" type="email" name="email" ></td>
+                    <td><input type="email" name="email" ></td>
                 </tr>
                 <tr>
                     <td>Password:</td>
-                    <td><input id="txtPass" type="password" name="password" ></td>
+                    <td><input type="password" name="password" ></td>
                 </tr>
                 <tr>
                     <td>Confirm Password:</td>
-                    <td><input id="txtConfirmPass" type="password" name="confirm_password" ></td>
+                    <td><input type="password" name="confirm_password" ></td>
                 </tr>
                 <tr>
                     <td>Contact Number:</td>
-                    <td><input id="txtPhone" type="text" name="contact_number" placeholder="+8801XXXXXXXXX" ></td>
+                    <td><input type="text" name="contact_number" placeholder="+8801XXXXXXXXX" ></td>
                 </tr>
                 <tr>
                     <td>Gender:</td>
@@ -44,7 +44,7 @@
                 </tr>
                 <tr>
                     <td>National ID:</td>
-                    <td><input id="txtNationalID" type="text" name="national_id" ></td>
+                    <td><input type="text" name="national_id" ></td>
                 </tr>
                 <tr>
                     <td>Upload ID Proof:</td>
