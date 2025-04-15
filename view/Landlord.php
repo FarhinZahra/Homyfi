@@ -3,31 +3,32 @@
 <head>
     <title>Landlord Registration | HomyFi</title>
     <link rel="stylesheet" type="text/css" href="../css/prious.css">
-    <script src="../JSS/validateform.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
     <center>
         <h2>HomyFi - Landlord Portal</h2>
         <h3>Register Your Property</h3>
         
-        <form name = "myForm" action="/form.php" onsubmit = "validateForm()" method="POST">
+        <form action="form.php" method="post" onsubmit="return validateForm()" novalidate>
             <table>
                 <tr>
                     <td colspan="2"><h4>Personal Information</h4></td>
                 </tr>
                 <tr>
-                    <td><input id="txtFname" type="text" name="first_name"placeholder="First Name"></td>
-                    <td><input type="text" name="last_name" placeholder="Last Name" ></td>
+                    <td><input id="txtFname" type="text" name="first_name" placeholder="First Name" required></td>
+                    <td><input id="txtLname" type="text" name="last_name" placeholder="Last Name" required></td>
                 </tr>
                 <tr>
-                    <td colspan="2"><input type="email" name="email" placeholder="Email Address" ></td>
+                    <td colspan="2"><input id="txtEmail" type="email" name="email" placeholder="Email Address" required></td>
                 </tr>
                 <tr>
-                    <td><input type="password" name="password" placeholder="Create Password" ></td>
-                    <td><input type="password" name="confirm_password" placeholder="Confirm Password" ></td>
+                    <td><input id="txtPass" type="password" name="password" placeholder="Create Password" required minlength="8"></td>
+                    <td><input id="txtConfirmPass" type="password" name="confirm_password" placeholder="Confirm Password" required></td>
                 </tr>
                 <tr>
-                    <td colspan="2"><input type="tel" name="phone" placeholder="Phone Number" pattern="[0-9]{10}" ></td>
+                    <td colspan="2"><input id="txtPhone" type="tel" name="phone" placeholder="Phone Number" pattern="[0-9]{10}" required></td>
                 </tr>
                 
                 <tr>
@@ -35,7 +36,7 @@
                 </tr>
                 <tr>
                     <td colspan="2">
-                        <select name="property_type" >
+                        <select name="property_type" id="propertyType" required>
                             <option value="" disabled selected>Select Property Type</option>
                             <option value="apartment">Apartment</option>
                             <option value="house">House</option>
@@ -46,15 +47,15 @@
                     </td>
                 </tr>
                 <tr>
-                    <td colspan="2"><input type="text" name="property_address" placeholder="Property Full Address" ></td>
+                    <td colspan="2"><input id="txtPropAdd" type="text" name="property_address" placeholder="Property Full Address" required></td>
                 </tr>
                 <tr>
-                    <td><input type="number" name="total_units" placeholder="Total Units Available" min="1"></td>
-                    <td><input type="number" name="bedrooms" placeholder="Bedrooms per Unit" min="1"></td>
+                    <td><input type="number" name="total_units" id="totalUnits" placeholder="Total Units Available" min="1" required></td>
+                    <td><input type="number" name="bedrooms" id="bedrooms" placeholder="Bedrooms per Unit" min="1" required></td>
                 </tr>
                 <tr>
                     <td colspan="2">
-                        <textarea name="property_description" placeholder="Describe your property (amenities, features, etc.)" rows="3"></textarea>
+                        <textarea name="property_description" id="propertyDescription" placeholder="Describe your property (amenities, features, etc.)" rows="3" required></textarea>
                     </td>
                 </tr>
                 
@@ -62,13 +63,13 @@
                     <td colspan="2"><h4>Business Information</h4></td>
                 </tr>
                 <tr>
-                    <td colspan="2"><input type="text" name="company_name" placeholder="Company Name (if applicable)"></td>
+                    <td colspan="2"><input id="txtCompanyName" type="text" name="company_name" placeholder="Company Name (if applicable)"></td>
                 </tr>
                 <tr>
-                    <td colspan="2"><input type="text" name="tax_id" placeholder="Tax Identification Number"></td>
+                    <td colspan="2"><input id="txtTAXNum" type="text" name="tax_id" placeholder="Tax Identification Number" required></td>
                 </tr>
                 <tr>
-                    <td colspan="2"><input type="text" name="license_number" placeholder="Rental License Number" ></td>
+                    <td colspan="2"><input id="txtLincenseNum" type="text" name="license_number" placeholder="Rental License Number" required></td>
                 </tr>
                 <tr>
                     <td colspan="2">
@@ -89,18 +90,18 @@
                             <p>Full terms available at www.homyfi.com/terms</p>
                         </div>
                         <label>
-                            <input type="checkbox" name="terms_agreed"> I agree to the Terms of Service and Privacy Policy
+                            <input type="checkbox" name="terms_agreed" id="termsAgreed" required> I agree to the Terms of Service and Privacy Policy
                         </label>
                     </td>
                 </tr>
                 <tr>
                     <td colspan="2" align="center">
                         <button type="submit">Register as Landlord</button>
-                        <!-- onclick="validateForm()" -->
                     </td>
                 </tr>
             </table>
         </form>
+        <script src="../JSS/validateform.js"></script>
     </center>
 </body>
 </html>
