@@ -1,6 +1,6 @@
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #eaf2f8;
+  background-color: #050607;
   margin: 0;
   padding: 20px;
 }
@@ -18,9 +18,8 @@ form {
   background-color: white;
   padding: 25px;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   position: relative;
-  z-index: 1;
+  
 }
 
 table {
@@ -49,8 +48,13 @@ textarea {
   background-color: #f9f9f9;
 }
 
+<<<<<<< HEAD
 button[type="submit"] {
   background-color: #ed490e;
+=======
+/*button[type="submit"] {
+  background-color: #2874a6;
+>>>>>>> 9c042ee (farhinnew)
   color: white;
   padding: 12px 25px;
   border: none;
@@ -61,7 +65,7 @@ button[type="submit"] {
   display: block;
   margin: 20px auto 0;
   transition: background-color 0.3s;
-}
+}*/
 
 button[type="submit"]:hover {
   background-color: #1a5276;

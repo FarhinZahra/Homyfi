@@ -11,7 +11,7 @@
         <h2>HomyFi - Landlord Portal</h2>
         <h3>Register Your Property</h3>
         
-        <form action="form.php" method="post" onsubmit="return validateForm()" >
+        <form  action="/form.php" method="POST">
             <table>
                 <tr>
                     <td colspan="2"><h4>Personal Information</h4></td>
@@ -97,7 +97,8 @@
                 </tr>
                 <tr>
                     <td colspan="2" align="center">
-                        <button type="submit">Register as Landlord</button>
+                        <button    onclick="validateForm()" type="submit">Register as Landlord</button>
+                        <!-- onclick="validateForm()" -->
                     </td>
                 </tr>
             </table>

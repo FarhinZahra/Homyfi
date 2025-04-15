@@ -1,4 +1,5 @@
 function validateForm() {
+<<<<<<< HEAD
   let firstName = document.getElementById("txtFname").value.trim();
   let lastName = document.getElementById("txtLname").value.trim();
   let email = document.getElementById("txtEmail").value.trim();
@@ -182,4 +183,33 @@ function validateTenantForm() {
         return false;
     }
     return true;
+=======
+    let x = document.getElementById("txtFName").value;
+    if (x == "") {
+      document.getElementById("txtFName").innerHTML = "Name must be filled out";
+    } else {
+      document.getElementById("txtFName").innerHTML = "Input OK";
+    } 
+  }
+
+
+  function calculate(operation) {
+    let num1 = parseFloat(document.getElementById("num1").value);// to access elements we use document.getElement...() method
+    let num2 = parseFloat(document.getElementById("num2").value);
+    let result;
+    
+    if (isNaN(num1) || isNaN(num2)) {
+        result = "Please enter valid numbers";
+    } else {
+        switch (operation) {
+            case '+': result = num1 + num2; break;
+            case '-': result = num1 - num2; break;
+            case '*': result = num1 * num2; break;
+            case '/': result = num2 == 0 ?"Cannot divide by zero":num1 / num2; break;
+            case '%': result = num2 !== 0 ? num1 % num2 : "Cannot mod by zero"; break;
+            default: result = "Invalid Operation";
+        }
+    }
+    document.getElementById("result").innerHTML = "Result: " + result;
+>>>>>>> 9c042ee (farhinnew)
   }
