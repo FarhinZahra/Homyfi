@@ -117,3 +117,64 @@ function validateForm() {
   }
   return true;
 }
+
+function validateTenantForm() {
+
+    let fullName = document.getElementById("txtFname").value.trim();
+    let email = document.getElementById("txtEmail").value.trim();
+    let pass = document.getElementById("txtPass").value.trim();
+    let conPass = document.getElementById("txtConfirmPass").value.trim();
+    let phone = document.getElementById("txtPhone").value.trim();
+    let nationalId = document.getElementById("txtNationalID").value.trim();
+  
+    if (fullName === "") {
+        alert("Please enter your full name.");
+        document.getElementById("txtFname").focus();
+        return false;
+    }
+  
+    if (email === "") {
+        alert("Please enter your email address.");
+        document.getElementById("txtEmail").focus();
+        return false;
+    }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        alert("Please enter a valid email address.");
+        document.getElementById("txtEmail").focus();
+        return false;
+    }
+  
+    if (pass === "") {
+        alert("Please enter a password.");
+        document.getElementById("txtPass").focus();
+        return false;
+    }
+    if (pass.length < 8) {
+        alert("Password must be at least 8 characters long.");
+        document.getElementById("txtPass").focus();
+        return false;
+    }
+    if (conPass !== pass) {
+        alert("Passwords do not match.");
+        document.getElementById("txtConfirmPass").focus();
+        return false;
+    }
+  
+    if (phone === "") {
+        alert("Please enter your phone number.");
+        document.getElementById("txtPhone").focus();
+        return false;
+    }
+    if (!/^\d{10}$/.test(phone)) {
+        alert("Please enter a valid 10-digit phone number.");
+        document.getElementById("txtPhone").focus();
+        return false;
+    }
+  
+    if (nationalId === "") {
+        alert("Please enter your national ID number.");
+        document.getElementById("txtNationalID").focus();
+        return false;
+    }
+    return true;
+  }

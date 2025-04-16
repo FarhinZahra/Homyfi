@@ -17,18 +17,18 @@
                     <td colspan="2"><h4>Personal Information</h4></td>
                 </tr>
                 <tr>
-                    <td><input id="txtFname" type="text" name="first_name" placeholder="First Name" required></td>
-                    <td><input id="txtLname" type="text" name="last_name" placeholder="Last Name" required></td>
+                    <td><input id="txtFname" type="text" name="first_name" placeholder="First Name" ></td>
+                    <td><input id="txtLname" type="text" name="last_name" placeholder="Last Name" ></td>
                 </tr>
                 <tr>
-                    <td colspan="2"><input id="txtEmail" type="email" name="email" placeholder="Email Address" required></td>
+                    <td colspan="2"><input id="txtEmail" type="email" name="email" placeholder="Email Address" ></td>
                 </tr>
                 <tr>
-                    <td><input id="txtPass" type="password" name="password" placeholder="Create Password" required minlength="8"></td>
-                    <td><input id="txtConfirmPass" type="password" name="confirm_password" placeholder="Confirm Password" required></td>
+                    <td><input id="txtPass" type="password" name="password" placeholder="Create Password"  minlength="8"></td>
+                    <td><input id="txtConfirmPass" type="password" name="confirm_password" placeholder="Confirm Password" ></td>
                 </tr>
                 <tr>
-                    <td colspan="2"><input id="txtPhone" type="tel" name="phone" placeholder="Phone Number" pattern="[0-9]{10}" required></td>
+                    <td colspan="2"><input id="txtPhone" type="tel" name="phone" placeholder="Phone Number" pattern="[0-9]{10}" ></td>
                 </tr>
                 
                 <tr>
@@ -36,7 +36,7 @@
                 </tr>
                 <tr>
                     <td colspan="2">
-                        <select name="property_type" id="propertyType" required>
+                        <select name="property_type" id="propertyType" >
                             <option value="" disabled selected>Select Property Type</option>
                             <option value="apartment">Apartment</option>
                             <option value="house">House</option>
@@ -47,15 +47,15 @@
                     </td>
                 </tr>
                 <tr>
-                    <td colspan="2"><input id="txtPropAdd" type="text" name="property_address" placeholder="Property Full Address" required></td>
+                    <td colspan="2"><input id="txtPropAdd" type="text" name="property_address" placeholder="Property Full Address" ></td>
                 </tr>
                 <tr>
-                    <td><input type="number" name="total_units" id="totalUnits" placeholder="Total Units Available" min="1" required></td>
-                    <td><input type="number" name="bedrooms" id="bedrooms" placeholder="Bedrooms per Unit" min="1" required></td>
+                    <td><input type="number" name="total_units" id="totalUnits" placeholder="Total Units Available" min="1" ></td>
+                    <td><input type="number" name="bedrooms" id="bedrooms" placeholder="Bedrooms per Unit" min="1" ></td>
                 </tr>
                 <tr>
                     <td colspan="2">
-                        <textarea name="property_description" id="propertyDescription" placeholder="Describe your property (amenities, features, etc.)" rows="3" required></textarea>
+                        <textarea name="property_description" id="propertyDescription" placeholder="Describe your property (amenities, features, etc.)" rows="3" ></textarea>
                     </td>
                 </tr>
                 
@@ -66,10 +66,10 @@
                     <td colspan="2"><input id="txtCompanyName" type="text" name="company_name" placeholder="Company Name (if applicable)"></td>
                 </tr>
                 <tr>
-                    <td colspan="2"><input id="txtTAXNum" type="text" name="tax_id" placeholder="Tax Identification Number" required></td>
+                    <td colspan="2"><input id="txtTAXNum" type="text" name="tax_id" placeholder="Tax Identification Number" ></td>
                 </tr>
                 <tr>
-                    <td colspan="2"><input id="txtLincenseNum" type="text" name="license_number" placeholder="Rental License Number" required></td>
+                    <td colspan="2"><input id="txtLincenseNum" type="text" name="license_number" placeholder="Rental License Number" ></td>
                 </tr>
                 <tr>
                     <td colspan="2">
@@ -90,7 +90,7 @@
                             <p>Full terms available at www.homyfi.com/terms</p>
                         </div>
                         <label>
-                            <input type="checkbox" name="terms_agreed" id="termsAgreed" required> I agree to the Terms of Service and Privacy Policy
+                            <input type="checkbox" name="terms_agreed" id="termsAgreed" > I agree to the Terms of Service and Privacy Policy
                         </label>
                     </td>
                 </tr>

@@ -1,4 +1,3 @@
-/* Tenant Registration Form Styles */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #eaf2f8;
@@ -51,7 +50,7 @@ textarea {
 }
 
 button[type="submit"] {
-  background-color: #2874a6;
+  background-color: #dc2818;
   color: white;
   padding: 12px 25px;
   border: none;
@@ -68,21 +67,19 @@ button[type="submit"]:hover {
   background-color: #1a5276;
 }
 
-/* Radio and checkbox styling */
 input[type="radio"],
 input[type="checkbox"] {
   margin-right: 5px;
   vertical-align: middle;
 }
 
-/* Position example for form header */
-.form-header {
+/* .form-header {
   position: relative;
   padding-bottom: 15px;
   margin-bottom: 20px;
-}
+} */
 
-.form-header:after {
+/* .form-header:after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -90,7 +87,7 @@ input[type="checkbox"] {
   width: 50%;
   height: 2px;
   background-color: #3498db;
-}
+} */
 
 /* Inline block example for amenities */
 .amenities-container {
