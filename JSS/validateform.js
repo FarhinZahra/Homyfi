@@ -183,6 +183,157 @@ function validateTenantForm() {
         return false;
     }
     return true;
+  }
+
+  function noneed() {
+
+    let fullName = document.getElementById("txtFname").value.trim();
+    let email = document.getElementById("txtEmail").value.trim();
+    let pass = document.getElementById("txtPass").value.trim();
+    let conPass = document.getElementById("txtConfirmPass").value.trim();
+    let phone = document.getElementById("txtPhone").value.trim();
+    let nationalId = document.getElementById("txtNationalID").value.trim();
+  
+    if (fullName === "") {
+        alert("Please enter your full name.");
+        document.getElementById("txtFname").focus();
+        return false;
+    }
+  
+    if (email === "") {
+        alert("Please enter your email address.");
+        document.getElementById("txtEmail").focus();
+        return false;
+    }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        alert("Please enter a valid email address.");
+        document.getElementById("txtEmail").focus();
+        return false;
+    }
+  
+    if (pass === "") {
+        alert("Please enter a password.");
+        document.getElementById("txtPass").focus();
+        return false;
+    }
+    if (pass.length < 8) {
+        alert("Password must be at least 8 characters long.");
+        document.getElementById("txtPass").focus();
+        return false;
+    }
+    if (conPass !== pass) {
+        alert("Passwords do not match.");
+        document.getElementById("txtConfirmPass").focus();
+        return false;
+    }
+  
+    if (phone === "") {
+        alert("Please enter your phone number.");
+        document.getElementById("txtPhone").focus();
+        return false;
+    }
+    if (!/^\d{11}$/.test(phone)) {
+        alert("Please enter a valid 11-digit phone number.");
+        document.getElementById("txtPhone").focus();
+        return false;
+    }
+  
+    if (nationalId === "") {
+        alert("Please enter your national ID number.");
+        document.getElementById("txtNationalID").focus();
+        return false;
+    }
+    return true;
+=======
+    let x = document.getElementById("txtFName").value;
+    if (x == "") {
+      document.getElementById("txtFName").innerHTML = "Name must be filled out";
+    } else {
+      document.getElementById("txtFName").innerHTML = "Input OK";
+    } 
+  }
+
+
+  function calculate(operation) {
+    let num1 = parseFloat(document.getElementById("num1").value);// to access elements we use document.getElement...() method
+    let num2 = parseFloat(document.getElementById("num2").value);
+    let result;
+    
+    if (isNaN(num1) || isNaN(num2)) {
+        result = "Please enter valid numbers";
+    } else {
+        switch (operation) {
+            case '+': result = num1 + num2; break;
+            case '-': result = num1 - num2; break;
+            case '*': result = num1 * num2; break;
+            case '/': result = num2 == 0 ?"Cannot divide by zero":num1 / num2; break;
+            case '%': result = num2 !== 0 ? num1 % num2 : "Cannot mod by zero"; break;
+            default: result = "Invalid Operation";
+        }
+    }
+    document.getElementById("result").innerHTML = "Result: " + result;
+>>>>>>> 9c042ee (farhinnew)
+  }
+
+  function noneed() {
+
+    let fullName = document.getElementById("txtFname").value.trim();
+    let email = document.getElementById("txtEmail").value.trim();
+    let pass = document.getElementById("txtPass").value.trim();
+    let conPass = document.getElementById("txtConfirmPass").value.trim();
+    let phone = document.getElementById("txtPhone").value.trim();
+    let nationalId = document.getElementById("txtNationalID").value.trim();
+  
+    if (fullName === "") {
+        alert("Please enter your full name.");
+        document.getElementById("txtFname").focus();
+        return false;
+    }
+  
+    if (email === "") {
+        alert("Please enter your email address.");
+        document.getElementById("txtEmail").focus();
+        return false;
+    }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        alert("Please enter a valid email address.");
+        document.getElementById("txtEmail").focus();
+        return false;
+    }
+  
+    if (pass === "") {
+        alert("Please enter a password.");
+        document.getElementById("txtPass").focus();
+        return false;
+    }
+    if (pass.length < 8) {
+        alert("Password must be at least 8 characters long.");
+        document.getElementById("txtPass").focus();
+        return false;
+    }
+    if (conPass !== pass) {
+        alert("Passwords do not match.");
+        document.getElementById("txtConfirmPass").focus();
+        return false;
+    }
+  
+    if (phone === "") {
+        alert("Please enter your phone number.");
+        document.getElementById("txtPhone").focus();
+        return false;
+    }
+    if (!/^\d{11}$/.test(phone)) {
+        alert("Please enter a valid 11-digit phone number.");
+        document.getElementById("txtPhone").focus();
+        return false;
+    }
+  
+    if (nationalId === "") {
+        alert("Please enter your national ID number.");
+        document.getElementById("txtNationalID").focus();
+        return false;
+    }
+    return true;
 =======
     let x = document.getElementById("txtFName").value;
     if (x == "") {
