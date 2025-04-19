@@ -50,7 +50,7 @@ textarea {
 }
 
 button[type="submit"] {
-  background-color: #dc2818;
+  background-color: #ed490e;
   color: white;
   padding: 12px 25px;
   border: none;
@@ -73,29 +73,11 @@ input[type="checkbox"] {
   vertical-align: middle;
 }
 
-/* .form-header {
-  position: relative;
-  padding-bottom: 15px;
-  margin-bottom: 20px;
-} */
-
-/* .form-header:after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 25%;
-  width: 50%;
-  height: 2px;
-  background-color: #3498db;
-} */
-
-/* Inline block example for amenities */
 .amenities-container {
   display: inline-block;
   margin-top: 5px;
 }
 
-/* Overflow example for textarea */
 textarea {
   min-height: 80px;
   resize: vertical;

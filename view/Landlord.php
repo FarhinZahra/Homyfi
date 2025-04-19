@@ -11,10 +11,11 @@
         <h2>HomyFi - Landlord Portal</h2>
         <h3>Register Your Property</h3>
         
-        <form action="form.php" method="post" onsubmit="return validateForm()" novalidate>
+        <form action="form.php" method="post" onsubmit="return validateForm()" >
             <table>
                 <tr>
                     <td colspan="2"><h4>Personal Information</h4></td>
+                    <td id = "error" colspan="2"><h4>Error Message </h4></td>
                 </tr>
                 <tr>
                     <td><input id="txtFname" type="text" name="first_name" placeholder="First Name" ></td>

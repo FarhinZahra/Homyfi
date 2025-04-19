@@ -1,5 +1,4 @@
 function validateForm() {
-
   let firstName = document.getElementById("txtFname").value.trim();
   let lastName = document.getElementById("txtLname").value.trim();
   let email = document.getElementById("txtEmail").value.trim();
@@ -19,35 +18,35 @@ function validateForm() {
   let termsAgreed = document.getElementById("termsAgreed").checked;
 
   if (firstName === "") {
-      alert("Please enter your first name.");
+      document.getElementById("error").innerHTML ="Please enter your first name";
       document.getElementById("txtFname").focus();
       return false;
   }
 
   if (lastName === "") {
-      alert("Please enter your last name.");
+    document.getElementById("error").innerHTML ="Please enter your last name";
       document.getElementById("txtLname").focus();
       return false;
   }
 
   if (email === "") {
-      alert("Please enter your email address.");
+      document.getElementById("error").innerHTML ="Please enter your email address.";
       document.getElementById("txtEmail").focus();
       return false;
   }
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-      alert("Please enter a valid email address.");
+      document.getElementById("error").innerHTML ="Please enter your email address.";
       document.getElementById("txtEmail").focus();
       return false;
   }
 
   if (pass === "") {
-      alert("Please enter a password.");
+      document.getElementById("error").innerHTML ="Please enter a password.";
       document.getElementById("txtPass").focus();
       return false;
   }
   if (pass.length < 8) {
-      alert("Password must be at least 8 characters long.");
+      document.getElementById("error").innerHTML ="Password must be at least 8 characters long.";
       document.getElementById("txtPass").focus();
       return false;
   }
@@ -96,6 +95,12 @@ function validateForm() {
       alert("Please describe your property.");
       document.getElementById("propertyDescription").focus();
       return false;
+  }
+
+  if (companyName === "") {
+    document.getElementById("txtCompanyName").innerHTML = "Please enter your Company name";
+    document.getElementById("txtCompanyName").focus();
+    return false;
   }
 
   if (taxNum === "") {
@@ -165,8 +170,8 @@ function validateTenantForm() {
         document.getElementById("txtPhone").focus();
         return false;
     }
-    if (!/^\d{10}$/.test(phone)) {
-        alert("Please enter a valid 10-digit phone number.");
+    if (!/^\d{11}$/.test(phone)) {
+        alert("Please enter a valid 11-digit phone number.");
         document.getElementById("txtPhone").focus();
         return false;
     }

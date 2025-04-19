@@ -2,14 +2,14 @@
 <html>
 <head>
     <title>Tenant Register | HomyFi</title>
-    <link rel="stylesheet" type="text/css" href="../css/farhin.css">
+    <link rel="stylesheet"  href="../css/farhin.css">
 </head>
 <body>
     <center>
         <h2>HomyFi - Tenant Registration</h2>
         <h3>Find Your Perfect Home</h3>
         
-        <form action="form.php" method="post" onsubmit="return validateTenantForm()" novalidate>
+        <form action="form.php" method="post" onsubmit="return validateTenantForm()" >
             <table>
                 <tr>
                     <td colspan="2"><strong>Personal Details</strong></td>
