@@ -1,60 +1,62 @@
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #050607;
+  background-color: #c6d6e6;
   margin: 0;
   padding: 20px;
 }
-
 h2, h3 {
   color: #1a5276;
+
+}
+label {
+  font-weight: bold;
+  color: #154360;
+}
+.roof-container {
+  position: relative;
+  width: 690px; /* slightly larger than form width */
+  margin: 0 auto 10px auto;
   text-align: center;
-  margin-bottom: 15px;
-  text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+}
+
+.roof {
+  width: 0;
+  height: 0;
+  border-left: 330px solid transparent;  /* wider left slope */
+  border-right: 330px solid transparent; /* wider right slope */
+  border-bottom: 110px solid #1a5276;     /* taller triangle */
+}
+
+
+.roof-text {
+  position: absolute;
+  top: 25px;
+  width: 100%;
+  color: white;
+}
+
+.roof-text h2 {
+  font-size: 18px;
+  color: white;
+}
+
+.roof-text h3 {
+  font-size: 16px;
+  margin-top: 3px;
+  color: white;
 }
 
 form {
-  max-width: 700px;
+  max-width: 600px; /* reduced from 700px */
   margin: 0 auto;
   background-color: white;
-  padding: 25px;
+  padding: 20px 30px; /* less padding */
   border-radius: 10px;
-  position: relative;
-  
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-table {
-  width: 100%;
-  border-collapse: separate;
-  border-spacing: 0 10px;
-}
-
-td {
-  padding: 8px;
-  vertical-align: middle;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="password"],
-input[type="date"],
-input[type="file"],
-select,
-textarea {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #aed6f1;
-  border-radius: 5px;
-  box-sizing: border-box;
-  background-color: #f9f9f9;
-}
-
-<<<<<<< HEAD
 button[type="submit"] {
-  background-color: #ed490e;
-=======
-/*button[type="submit"] {
   background-color: #2874a6;
->>>>>>> 9c042ee (farhinnew)
   color: white;
   padding: 12px 25px;
   border: none;
@@ -64,26 +66,18 @@ button[type="submit"] {
   font-weight: bold;
   display: block;
   margin: 20px auto 0;
-  transition: background-color 0.3s;
-}*/
+  transition: background-color 0.3s ease;
+}
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+input[type="file"],
+select {
+  padding: 8px;
+  font-size: 14px;
+}
 
 button[type="submit"]:hover {
   background-color: #1a5276;
-}
-
-input[type="radio"],
-input[type="checkbox"] {
-  margin-right: 5px;
-  vertical-align: middle;
-}
-
-.amenities-container {
-  display: inline-block;
-  margin-top: 5px;
-}
-
-textarea {
-  min-height: 80px;
-  resize: vertical;
-  overflow-y: auto;
 }
