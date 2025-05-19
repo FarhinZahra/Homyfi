@@ -18,9 +18,9 @@ function createConObject(){
     $this->DBName);
 }
 
-function insertUserData($conn,$fullName,$email,$phone,$gender, $password, $filename){
+function insertUserData($conn,$fullName,$email,$phone,$gender, $password, $NID){
 $qrystring="INSERT INTO userstable (fullName,email, phone,gender,password,NID,role) 
-VALUES ('$fullName','$email','$phone','$gender', '$password', '$filename','Customer')";
+VALUES ('$fullName','$email','$phone','$gender', '$password', '$NID','Customer')";
 $result = $conn->query($qrystring);
 if($result === false)
 {
