@@ -1,6 +1,5 @@
 <?php
 
-
 class mydb{
 public  $DBHostName="";
 public $DBUserName="";
