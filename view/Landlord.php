@@ -11,7 +11,7 @@
         <h2>HomyFi - Landlord Portal</h2>
         <h3>Register Your Property</h3>
         
-        <form  action="/form.php" method="POST">
+        <form  action="" method="POST">
             <table>
                 <tr>
                     <td colspan="2"><h4>Personal Information</h4></td>
