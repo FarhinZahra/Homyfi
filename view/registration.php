@@ -7,7 +7,7 @@ include '../control/validation.php';
 <html>
   <head>
     <title>Tenant Validation</title>
-    <link rel="stylesheet" href="../css/farhin.css" />
+    <!-- <link rel="stylesheet" href="../css/farhin.css" /> -->
   </head>
   <body>
   <div class="roof-container">
@@ -66,7 +66,7 @@ include '../control/validation.php';
         </tr>
         <tr>
           <td colspan="2" style="text-align: center">
-            <button type="submit" id="button1">Submit</button>
+            <input type="submit" name="submit" id="button1">
           </td>
         </tr>
       </table>

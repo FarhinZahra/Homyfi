@@ -2,14 +2,16 @@
 
 <?php
 
+
 include '../model/mydb.php';
 
 $fullNameErr=$dobErr=$AmenitiesErr=$genderErr=
 $cityErr=$phoneErr=$emailErr=$passErr=$confirmPassErr=$fileErr="";
 
 if(isset($_POST["submit"])){
+   
 
- $fullName = isset($_POST['fullName']) ? trim($_POST['fullName']) : '';
+$fullName = isset($_POST['fullName']) ? trim($_POST['fullName']) : '';
 $gender = isset($_POST['gender']) ? trim($_POST['gender']) : '';
 $phone = isset($_POST['phone']) ? trim($_POST['phone']) : '';
 $email = isset($_POST['email']) ? trim($_POST['email']) : '';
