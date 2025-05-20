@@ -1,3 +1,7 @@
+<?php
+include '../control/validlandlord.php';
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,29 +16,46 @@
         <h3>Register Your Property</h3>
         
         <form  action="" method="POST">
-            <table>
-                <tr>
-                    <td colspan="2"><h4>Personal Information</h4></td>
-                    <td id = "error" colspan="2"><h4>Error Message </h4></td>
-                </tr>
-                <tr>
-                    <td><input id="txtFname" type="text" name="first_name" placeholder="First Name" ></td>
-                    <td><input id="txtLname" type="text" name="last_name" placeholder="Last Name" ></td>
-                </tr>
-                <tr>
-                    <td colspan="2"><input id="txtEmail" type="email" name="email" placeholder="Email Address" ></td>
-                </tr>
-                <tr>
-                    <td><input id="txtPass" type="password" name="password" placeholder="Create Password"  minlength="8"></td>
-                    <td><input id="txtConfirmPass" type="password" name="confirm_password" placeholder="Confirm Password" ></td>
-                </tr>
-                <tr>
-                    <td colspan="2"><input id="txtPhone" type="tel" name="phone" placeholder="Phone Number" pattern="[0-9]{10}" ></td>
-                </tr>
-                
-                <tr>
-                    <td colspan="2"><h4>Property Details</h4></td>
-                </tr>
+     <table>
+          <tr>      
+          <td><label for="firstName">First Name</label></td>
+          <td><input type="text" name="firstName" id="firstName"></td>
+          <td><?php echo  $firstNameErr; ?></td>
+        </tr>
+        <tr>
+          <td><label for="lastName">Last Name</label></td>
+          <td><input type="text" name="lastName" id="lastName"></td>
+          <td><?php echo  $lastNameErr; ?></td>
+        </tr>
+        <tr>
+          <td><label for="email">Email</label></td>
+          <td><input type="email" name="email" id="email"></td>
+          <td><?php echo  $emailErr; ?></td>
+        </tr>
+        <tr>
+          <td><label for="phone">Phone</label></td>
+          <td><input type="text" name="phone" id="phone"></td>
+          <td><?php echo  $phoneErr; ?></td>
+        </tr>
+       
+        <tr>
+          <td><label for="gender">Gender</label></td>
+          <td>
+            <input type="radio" name="gender" value="Male" id="male"> Male
+            <input type="radio" name="gender" value="Female" id="female"> Female
+          </td>
+          <td><?php echo  $genderErr; ?></td>
+        </tr>
+        <tr>
+          <td><label for="pass">Password</label></td>
+          <td><input type="password" name="pass" id="pass"></td>
+          <td><?php echo  $passErr; ?></td>
+        </tr>
+        <tr>
+          <td><label for="confirmPass">Confirm Password</label></td>
+          <td><input type="password" name="confirmPass" id="confirmPass"></td>
+          <td><?php echo  $confirmPassErr; ?></td>
+        </tr>
                 <tr>
                     <td colspan="2">
                         <select name="property_type" id="propertyType" >
@@ -46,6 +67,7 @@
                             <option value="villa">Villa</option>
                         </select>
                     </td>
+                      <td><?php echo  $propertyTypeErr; ?></td>
                 </tr>
                 <tr>
                     <td colspan="2"><input id="txtPropAdd" type="text" name="property_address" placeholder="Property Full Address" ></td>
@@ -56,22 +78,12 @@
                 </tr>
                 <tr>
                     <td colspan="2">
-                        <textarea name="property_description" id="propertyDescription" placeholder="Describe your property (amenities, features, etc.)" rows="3" ></textarea>
+                        <textarea name="property_description" id="property_description" placeholder="Describe your property (amenities, features, etc.)" rows="3" ></textarea>
                     </td>
+                     <td><?php echo  $property_descriptionErr; ?></td>
                 </tr>
                 
-                <tr>
-                    <td colspan="2"><h4>Business Information</h4></td>
-                </tr>
-                <tr>
-                    <td colspan="2"><input id="txtCompanyName" type="text" name="company_name" placeholder="Company Name (if applicable)"></td>
-                </tr>
-                <tr>
-                    <td colspan="2"><input id="txtTAXNum" type="text" name="tax_id" placeholder="Tax Identification Number" ></td>
-                </tr>
-                <tr>
-                    <td colspan="2"><input id="txtLincenseNum" type="text" name="license_number" placeholder="Rental License Number" ></td>
-                </tr>
+                
                 <tr>
                     <td colspan="2">
                         <div class="special-container">
@@ -94,12 +106,12 @@
                             <input type="checkbox" name="terms_agreed" id="termsAgreed" > I agree to the Terms of Service and Privacy Policy
                         </label>
                     </td>
+                    <td><?php echo  $termsAgreedErr; ?></td>
                 </tr>
                 <tr>
-                    <td colspan="2" align="center">
-                        <button    onclick="validateForm()" type="submit">Register as Landlord</button>
-                        <!-- onclick="validateForm()" -->
-                    </td>
+                     <td colspan="2" style="text-align: center">
+              <input type="submit" name="submit" id="button1">
+               </td>
                 </tr>
             </table>
         </form>

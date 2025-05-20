@@ -1,3 +1,5 @@
+
+
 <?php
 
 class mydb{
@@ -29,29 +31,35 @@ else{
     return $result;
 }
 }
-function showOrderById($conn,$table,$orderid){
-    $qrystring="SELECT * FROM $table WHERE id = '$orderid'";
+function showDataByEmail($conn,$email){
+    $qrystring="SELECT * FROM userstable WHERE email = '$email'";
     $result= $conn->query($qrystring);
     return $result;
 }
-function updateOrder($conn,$table,$orderid,$quantity){
-  
-    $qrystring="UPDATE $table SET quantity = '$quantity' WHERE id='$orderid'";
-    $result= $conn->query($qrystring);
+function updateUser($conn, $fullName, $email, $phone, $gender, $password) {
+    $qrystring = "UPDATE userstable 
+                  SET fullName='$fullName', 
+                      phone='$phone', 
+                      gender='$gender', 
+                      password='$password' 
+                     
+                  WHERE email='$email'";
+    $result = $conn->query($qrystring);
     return $result;
 }
+
 function createUser($conn,$table, $name, $email, $password){
     $querystring="INSERT INTO $table (name,email, password) VALUES ('$name','$email', '$password')";
     $result=$conn->query($querystring);
     return $result;
 }
-function login($conn,$table,$email){
-    $querystring="SELECT * FROM $table WHERE email = '$email'";
+
+
+function login($conn,$email){
+    $querystring="SELECT * FROM userstable WHERE email = '$email'";
     $result=$conn->query($querystring);
     return $result;
 }
-
-
 
 function closeCon($conn)
 {

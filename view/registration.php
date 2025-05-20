@@ -7,7 +7,7 @@ include '../control/validation.php';
 <html>
   <head>
     <title>Tenant Validation</title>
-    <!-- <link rel="stylesheet" href="../css/farhin.css" /> -->
+     <link rel="stylesheet" href="../css/farhin.css" /> 
   </head>
   <body>
   <div class="roof-container">
@@ -50,8 +50,8 @@ include '../control/validation.php';
           <td><span><?php echo  $genderErr; ?></span></td>
         </tr>
         <tr>
-          <td><label for="pass">Password</label></td>
-          <td><input type="password" name="pass" id="pass"></td>
+          <td><label for="password">Password</label></td>
+          <td><input type="password" name="password" id="password"></td>
           <td><span><?php echo  $passErr; ?></span></td>
         </tr>
         <tr>
