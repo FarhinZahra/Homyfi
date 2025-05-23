@@ -31,6 +31,17 @@ else{
     return $result;
 }
 }
+ function getAllUsers($conn) {
+    $sql = "SELECT * FROM userstable";
+    return $conn->query($sql);
+}
+
+public function deleteUser($conn, $email) {
+    $sql = "DELETE FROM users WHERE email='$email'";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("s", $email);
+    return $stmt->execute();
+}
 function showDataByEmail($conn,$email){
     $qrystring="SELECT * FROM userstable WHERE email = '$email'";
     $result= $conn->query($qrystring);

@@ -1,0 +1,88 @@
+.user-management {
+  padding: 20px;
+  background-color: #e6f7f4;
+  border-radius: 10px;
+}
+ 
+.user-management h2 {
+  margin-bottom: 20px;
+  color: #444;
+}
+ 
+.form-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+ 
+.form-group {
+  flex: 1 1 200px;
+  display: flex;
+  flex-direction: column;
+}
+ 
+.form-group label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+ 
+.form-group input,
+.form-group select {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+ 
+.buttons {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+}
+ 
+.buttons button {
+  padding: 10px 20px;
+  background-color: #0077b6;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+ 
+.buttons button:hover {
+  background-color: #023e8a;
+}
+ 
+.search-bar {
+  margin: 20px 0;
+}
+ 
+.search-bar input {
+  width: 300px;
+  padding: 8px;
+  border: 1px solid #999;
+  border-radius: 5px;
+}
+ 
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+}
+ 
+thead {
+  background-color: #0077b6;
+  color: white;
+}
+ 
+th, td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ccc;
+}
+ 
+tbody tr:hover {
+  background-color: #e0f7fa;
+  cursor: pointer;
+}

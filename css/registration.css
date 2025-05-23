@@ -1,0 +1,68 @@
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+  background: url('../images/Homyfi_home.png') no-repeat center center fixed;
+  background-size: cover; /* Fullscreen background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Optional overlay if you wrap your form in a container */
+.overlay {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.3); /* Optional glass effect */
+  padding: 30px 40px;
+  border-radius: 20px;
+  backdrop-filter: blur(4px);
+}
+
+/* Hide the 'roof part' (h2 and h3) */
+h2, h3 {
+  display: none;
+}
+
+.brand-name {
+  font-size: 40px;
+  background: linear-gradient(to right, #8e44ad, #3498db);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.btn {
+  display: inline-block;
+  width: 40%;
+  margin: 10px;
+  padding: 12px 0;
+  background-color: rgba(52, 152, 219, 0.9);
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  background-color: rgb(48, 81, 102);
+}
+
+@media (max-width: 600px) {
+  .btn {
+    width: 80%;
+  }
+
+  .brand-name {
+    font-size: 32px;
+  }
+}

@@ -1,5 +1,5 @@
 <?php
-include '../control/validation.php';
+include '../Control/validation.php';
 ?>
 
 
@@ -7,17 +7,13 @@ include '../control/validation.php';
 <html>
   <head>
     <title>Tenant Validation</title>
-     <link rel="stylesheet" href="../css/farhin.css" /> 
+     <link href="../css/registration.css" rel="stylesheet" /> 
   </head>
   <body>
-  <div class="roof-container">
-  <div class="roof"></div>
-  <div class="roof-text">
+  
     <h2>HomyFi - Tenant Registration</h2>
     <h3>Find Your Perfect Home</h3>
-  </div>
-</div>
-</form>
+    <div class="overlay">
 
     <form action=" " method="post" enctype="multipart/form-data" >
       <table>
@@ -71,6 +67,7 @@ include '../control/validation.php';
         </tr>
       </table>
     </form>
+    </div>
    <script src="../script.js"></script> 
   </body>
 </html>
