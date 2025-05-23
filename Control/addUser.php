@@ -1,6 +1,4 @@
 <?php
-
-
 include '../model/mydb.php';
 $haserror=false;
 
@@ -83,10 +81,5 @@ if(isset($_POST["submit"]))
       }
       $mydb->closeCon($conn);
     }
-    
-
-   
-
-
 }
-  ?>
+?>

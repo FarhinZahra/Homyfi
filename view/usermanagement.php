@@ -1,14 +1,4 @@
 
-<?php
-include '../Control/addUser.php';
-
-include '../Control/deleteUser.php';
-include '../Control/updateUser.php';
-include '../Control/getUser.php';
-?>
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -76,7 +66,7 @@ include '../Control/getUser.php';
     <table id="userTable">
       <thead>
         <tr>
-           <th>ID</th>
+          <th>ID</th>
           <th>Full Name</th>
           <th>Email</th>
           <th>Phone</th>
@@ -87,49 +77,10 @@ include '../Control/getUser.php';
         </tr>
       </thead>
       <tbody>
-        <tr onclick="selectUser(this)">
-          <td id="id"></td>
-          <td id="fullName"></td>
-          <td id="email"></td>
-          <td id="phone" ></td>
-          <td id="gender"></td>
-          <td id="password"></td>
-          <td id="nid"></td>
-          <td id="role"></td>
-        </tr>
-        <!-- More rows can be dynamically loaded -->
+        
       </tbody>
     </table>
   </div>
-
- <!-- More rows can be dynamically loaded   <script>
-    function selectUser(row) {
-      const cells = row.getElementsByTagName("td");
-      document.getElementById("fullName").value = cells[0].innerText;
-      document.getElementById("email").value = cells[1].innerText;
-      document.getElementById("phone").value = cells[2].innerText;
-      document.getElementById("gender").value = cells[3].innerText;
-      document.getElementById("password").value = cells[4].innerText;
-      document.getElementById("NID").value = cells[5].innerText;
-      document.getElementById("role").value = cells[6].innerText;
-    }
-
-    function clearForm() {
-      document.querySelectorAll('.form-group input, .form-group select').forEach(el => el.value = '');
-    }
-
-    function filterUsers() {
-      const input = document.getElementById("search").value.toLowerCase();
-      const rows = document.querySelectorAll("#userTable tbody tr");
-      rows.forEach(row => {
-        row.style.display = row.innerText.toLowerCase().includes(input) ? '' : 'none';
-      });
-    }
-
-    function addUser() { alert("Add functionality here"); }
-    function updateUser() { alert("Update functionality here"); }
-    function deleteUser() { alert("Delete functionality here"); }
-  </script>--> 
  <script src="../JSS/usermanage.js"></script>
 </body>
 </html>
