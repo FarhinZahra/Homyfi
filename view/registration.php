@@ -15,7 +15,7 @@ include '../Control/validation.php';
     <h3>Find Your Perfect Home</h3>
     <div class="overlay">
 
-    <form action=" " method="post" enctype="multipart/form-data" >
+    <form action="" method="post" enctype="multipart/form-data" >
       <table>
       <tr>
             <td colspan="2"><h3>-----------------------Personal Details-----------------------</h3></td>
@@ -35,6 +35,16 @@ include '../Control/validation.php';
           <td><label for="phone">Phone</label></td>
           <td><input type="text" name="phone" id="phone"></td>
           <td><span><?php echo  $phoneErr; ?></span></td>
+        </tr>
+        <tr>
+          <td><label for="role">Role</label></td>
+          <td>
+            <select id="role" name ="role">
+            <option>Admin</option>
+            <option>Customer</option>
+            </select>
+          </td>
+          <td><span><?php echo  $roleError; ?></span></td>
         </tr>
        
         <tr>
@@ -68,6 +78,5 @@ include '../Control/validation.php';
       </table>
     </form>
     </div>
-   <script src="../script.js"></script> 
   </body>
 </html>

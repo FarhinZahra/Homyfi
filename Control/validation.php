@@ -1,12 +1,8 @@
-
-
 <?php
-
-
 include '../model/mydb.php';
 $haserror=false;
 
-$fullNameErr=$dobErr=$AmenitiesErr=$genderErr=
+$fullNameErr=$dobErr=$AmenitiesErr=$genderErr=$roleError=
 $cityErr=$phoneErr=$emailErr=$passErr=$confirmPassErr=$fileErr="";
 
 if(isset($_POST["submit"]))
@@ -16,8 +12,7 @@ if(isset($_POST["submit"]))
   $phone = isset($_POST['phone']) ? trim($_POST['phone']) : '';
   $email = isset($_POST['email']) ? trim($_POST['email']) : '';
   $password = isset($_POST['password']) ? $_POST['password'] : '';
-   //$hashedpassword=password_hash($_POST["password"], PASSWORD_DEFAULT);
-// Save $hashed_password to database
+  $role = isset($_POST['role']) ? trim($_POST['role']) : '';
 
   $confirmPass = isset($_POST['confirmPass']) ? $_POST['confirmPass'] : '';
 
@@ -26,8 +21,12 @@ if(isset($_POST["submit"]))
 
     if (empty($_POST["fullName"])) {
       $fullNameErr  = "Name is required";
-      $haserror = ture;
-    } 
+      $haserror = true;
+    }
+    if (empty($_POST["role"])) {
+      $roleError  = "role is required";
+      $haserror = true;
+    }  
     if (empty($_POST["gender"])) {
       $genderErr= "gender is required";
       $haserror = true;
@@ -76,7 +75,7 @@ if(isset($_POST["submit"]))
           
       $mydb= new mydb();
       $conn = $mydb->createConObject();
-      $result = $mydb->insertUserData($conn,$fullName,$email,$phone,$gender,$password, $NID);
+      $result = $mydb->insertUserData($conn,$fullName,$email,$phone,$gender,$password, $NID, $role);
       if($result === false){
           echo "error occured while creating user";
       }

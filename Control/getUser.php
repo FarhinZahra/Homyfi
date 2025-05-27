@@ -1,5 +1,5 @@
 <?php
-require_once("../model/mydb.php");
+include "../model/mydb.php";
 
 $db = new mydb();
 $conn = $db->createConObject();

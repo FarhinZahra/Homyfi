@@ -1,5 +1,3 @@
-
-
 <?php
 
 class mydb{
@@ -19,9 +17,9 @@ function createConObject(){
     $this->DBName);
 }
 
-function insertUserData($conn,$fullName,$email,$phone,$gender, $password, $NID){
+function insertUserData($conn,$fullName,$email,$phone,$gender, $password, $NID, $role){
 $qrystring="INSERT INTO userstable (fullName,email, phone,gender,password,NID,role) 
-VALUES ('$fullName','$email','$phone','$gender', '$password', '$NID','Customer')";
+VALUES ('$fullName','$email','$phone','$gender', '$password', '$NID','$role')";
 $result = $conn->query($qrystring);
 if($result === false)
 {
@@ -37,11 +35,17 @@ else{
 }
 
 public function deleteUser($conn, $email) {
-    $sql = "DELETE FROM users WHERE email='$email'";
+    $sql = "DELETE FROM userstable WHERE email = ?";
     $stmt = $conn->prepare($sql);
+
+    if (!$stmt) {
+        return false;
+    }
+
     $stmt->bind_param("s", $email);
     return $stmt->execute();
 }
+
 function showDataByEmail($conn,$email){
     $qrystring="SELECT * FROM userstable WHERE email = '$email'";
     $result= $conn->query($qrystring);
