@@ -78,9 +78,5 @@ include '../Control/validation.php';
       </table>
     </form>
     </div>
-<<<<<<< HEAD
-=======
-  
->>>>>>> 4cb0c67 ( true changes)
   </body>
 </html>

@@ -14,7 +14,7 @@
 <ul>
 <li onclick="loadContent('dashboard')">Dashboard</li>
 <li onclick="loadContent('user')">User Management</li>
-<li onclick="loadContent('properties')">Property Management</li>
+<li onclick="loadContent('property')">Property Management</li>
 <li onclick="loadContent('bookings')">Booking Management</li>
 <li onclick="loadContent('payments')">Payment Records</li>
 <li onclick="loadContent('reports')">Reports</li>
@@ -38,7 +38,7 @@ function loadContent(section) {
   const pageTitle = {
     dashboard: "Dashboard",
     user: "User Management",
-    properties: "Property Management",
+    property: "Property Management",
     bookings: "Booking Management",
     payments: "Payment Records",
     reports: "Reports"
@@ -55,6 +55,9 @@ function loadContent(section) {
       // Dynamically load JS if User Management is selected
       if (section === 'user') {
         loadScript("../JSS/usermanage.js");
+      }
+      else if (section === 'property') {
+        loadScript("../JSS/propertymanage.js");
       }
     });
 }
