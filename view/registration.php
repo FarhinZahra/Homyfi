@@ -11,10 +11,10 @@ include '../Control/validation.php';
   </head>
   <body>
   
-    <h2>HomyFi - Tenant Registration</h2>
-    <h3>Find Your Perfect Home</h3>
+    
     <div class="overlay">
-
+     <h2>HomyFi -Registration</h2>
+    <h3>Find Your Perfect Home</h3>
     <form action="" method="post" enctype="multipart/form-data" >
       <table>
       <tr>
@@ -78,5 +78,9 @@ include '../Control/validation.php';
       </table>
     </form>
     </div>
+<<<<<<< HEAD
+=======
+  
+>>>>>>> 4cb0c67 ( true changes)
   </body>
 </html>

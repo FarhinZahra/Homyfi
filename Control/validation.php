@@ -22,11 +22,7 @@ if(isset($_POST["submit"]))
     if (empty($_POST["fullName"])) {
       $fullNameErr  = "Name is required";
       $haserror = true;
-    }
-    if (empty($_POST["role"])) {
-      $roleError  = "role is required";
-      $haserror = true;
-    }  
+    } 
     if (empty($_POST["gender"])) {
       $genderErr= "gender is required";
       $haserror = true;
