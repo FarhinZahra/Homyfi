@@ -12,7 +12,7 @@
 <div class="logo">🏠 RentalAdmin</div>
 <nav>
 <ul>
-<li onclick="loadContent('dashboard')">Dashboard</li>
+<li onclick="loadContent('profile')">Profile Dashboard</li>
 <li onclick="loadContent('user')">User Management</li>
 <li onclick="loadContent('property')">Property Management</li>
 <li onclick="loadContent('bookings')">Booking Management</li>
@@ -36,7 +36,7 @@
 <script>
 function loadContent(section) {
   const pageTitle = {
-    dashboard: "Dashboard",
+    profile: "profile",
     user: "User Management",
     property: "Property Management",
     bookings: "Booking Management",
@@ -52,12 +52,16 @@ function loadContent(section) {
       const contentArea = document.getElementById("content-area");
       contentArea.innerHTML = html;
 
-      // Dynamically load JS if User Management is selected
       if (section === 'user') {
         loadScript("../JSS/usermanage.js");
       }
       else if (section === 'property') {
         loadScript("../JSS/propertymanage.js");
+      }
+      else if (section === 'profile') {
+        const existing = document.getElementById("page-title").innerText = pageTitle;
+        if (existing) existing.remove(); // Remove if already exists
+        document.body.appendChild(contentArea);
       }
     });
 }

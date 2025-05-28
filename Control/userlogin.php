@@ -31,7 +31,7 @@ if (strlen($password) < 8) {
        if($password == $data["password"])
     {
        $_SESSION["email"] = $email;
-       header("Location: ../view/userprofile.php");
+       header("Location: ../view/admindashboard.php");
         }
         else{
             echo "wrong password";
