@@ -13,13 +13,13 @@ body {
     .overlay {
       text-align: center;
       background-color: rgba(255, 255, 255, 0.3); /* ✅ Optional overlay for visibility */
-      padding: 30px 40px;
+      padding: 20px 40px;
       border-radius: 20px;
       backdrop-filter: blur(4px); /* ✅ Glass effect */
     }
 
 form {
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(26, 24, 24, 0.6);
   padding: 30px;
   margin: 40px auto;
   width: 70%;

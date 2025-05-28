@@ -58,25 +58,32 @@ if(isset($_POST["submit"]))
     else
     { 
       $NID="../images/".time().$_FILES["uploadFile"]["name"];
-        
-     $isupload= move_uploaded_file($_FILES["uploadFile"]["tmp_name"], $NID);
-      
-      if ($isupload) 
-      {
-        echo "The file ". basename( $_FILES["uploadFile"]["name"]). " has been uploaded.";
-      } 
-      else {
-        echo "Sorry, there was an error uploading your file.";
-      }
-          
+
       $mydb= new mydb();
       $conn = $mydb->createConObject();
-      $result = $mydb->insertUserData($conn,$fullName,$email,$phone,$gender,$password, $NID, $role);
-      if($result === false){
-          echo "error occured while creating user";
+      $userexist = $mydb->checkuser($conn, $email);
+      if($userexist->num_rows > 0)
+      {
+          echo "user already existed by email";
       }
       else{
-          echo "user created successfully";
+            
+            $result = $mydb->insertUserData($conn,$fullName,$email,$phone,$gender,$password, $NID, $role);
+            if($result === false){
+                echo "error occured while creating user";
+            }
+            else{
+              $isupload= move_uploaded_file($_FILES["uploadFile"]["tmp_name"], $NID);
+          
+            if ($isupload) 
+            {
+              echo "The file ". basename( $_FILES["uploadFile"]["name"]). " has been uploaded.";
+            } 
+            else {
+              echo "Sorry, there was an error uploading your file.";
+            }
+                echo "user created successfully";
+            }
       }
       $mydb->closeCon($conn);
     }

@@ -24,11 +24,12 @@ html, body {
   border-radius: 20px;
   backdrop-filter: blur(4px);
 }
-
-/* Hide the 'roof part' (h2 and h3) */
 h2, h3 {
-  display: none;
+  text-align: center;
+  color: #131111;
+  margin-bottom: 10px;
 }
+
 
 .brand-name {
   font-size: 40px;

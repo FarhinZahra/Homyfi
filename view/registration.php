@@ -7,19 +7,20 @@ include '../Control/validation.php';
 <html>
   <head>
     <title>Tenant Validation</title>
-     <link href="../css/registration.css" rel="stylesheet" /> 
+    <link rel="stylesheet" href="../css/farhin.css" /> 
+     
   </head>
   <body>
   
     
     <div class="overlay">
-     <h2>HomyFi -Registration</h2>
-    <h3>Find Your Perfect Home</h3>
+    
     <form action="" method="post" enctype="multipart/form-data" >
       <table>
-      <tr>
-            <td colspan="2"><h3>-----------------------Personal Details-----------------------</h3></td>
+         <tr>
+            <td colspan="2"><h3>--Please Register to continue--</h3></td>
       </tr>
+
         <tr>
           <td><label for="fullName">Full-Name</label></td>
           <td><input type="text" name="fullName" id="fullName"></td>

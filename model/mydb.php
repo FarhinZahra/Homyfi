@@ -106,12 +106,11 @@ function updateUser($conn, $fullName, $email, $phone, $gender, $password) {
     return $result;
 }
 
-function createUser($conn,$table, $name, $email, $password){
-    $querystring="INSERT INTO $table (name,email, password) VALUES ('$name','$email', '$password')";
+function checkuser($conn,$email){
+    $querystring="SELECT * FROM userstable WHERE email = '$email'";
     $result=$conn->query($querystring);
     return $result;
 }
-
 
 function login($conn,$email){
     $querystring="SELECT * FROM userstable WHERE email = '$email'";

@@ -10,19 +10,14 @@ include '../control/userlogin.php';
      <link rel="stylesheet" href="../css/farhin.css" /> 
   </head>
   <body>
-  <div class="roof-container">
-  <div class="roof"></div>
-  <div class="roof-text">
-    <h2>HomyFi - Login</h2>
-    <h3>Find Your Perfect Home</h3>
-  </div>
-</div>
-</form>
+ 
+  
 
+    <div class="overlay">
     <form action=" " method="post"  >
       <table>
         <tr>
-            <td colspan="2"><h3>-----------------------Please login to continue-----------------------</h3></td>
+            <td colspan="2"><h3>--Please login--</h3></td>
       </tr>
 
       <tr>
